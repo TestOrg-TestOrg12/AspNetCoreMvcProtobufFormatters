@@ -7,6 +7,7 @@ init:
 install:
   - ECHO %APPVEYOR_BUILD_WORKER_IMAGE%
   - ps: Install-Product node $env:nodejs_version
+  - dotnet restore
   - dotnet --version
   - dotnet restore AspNetCoreProtobufFormatters.sln
   - dotnet restore SystemTests.sln
