@@ -1,6 +1,7 @@
 image: Visual Studio 2019
 init:
   - git config --global core.autocrlf true
+  - ps $env:Path = "D:\User\lprabhakaran\AppData\Local\Programs\Git\cmd;$env:Path"
 install:
   - ECHO %APPVEYOR_BUILD_WORKER_IMAGE%
   - ps: Install-Product node $env:nodejs_version
