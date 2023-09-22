@@ -4,6 +4,7 @@ init:
   - ps: >-
       $env:Path = "D:\User\lprabhakaran\AppData\Local\Programs\Git\cmd;$env:Path"
       $env:Path = "C:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\MSBuild\Current\Bin;$env:Path"
+      $env:Path = "C:\Program Files\dotnet\sdk\5.0.416\Sdks;$env:Path"
 install:
   - ECHO %APPVEYOR_BUILD_WORKER_IMAGE%
   - ps: Install-Product node $env:nodejs_version
